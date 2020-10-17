@@ -47,8 +47,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group{{$errors->has('producer')?' has-error':''}}">
                     <strong>Producer :</strong>
-                    {{-- <textarea name="producer" id="producer" rows="10" placeholder="producer"
-                    class="form-control"></textarea> --}}
+                
                     <select class="form-control input-width" name="producer">
                         @foreach ($producer as $producers)
                         <option value="{{ $producers->id }}" @if(old('producer')==$producers->id)
@@ -74,13 +73,6 @@
                     </select>
                 </div>
             </div>
-            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group{{$errors->has('amount')?' has-error':''}}">
-                    <strong>Amount :</strong>
-                    <input type="number" name="amount" id="amount" value="{{ old('amount') }}" class="form-control">
-                    <span class="text-danger">{{$errors->first('amount')}}</span>
-                </div>
-            </div> --}}
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Image :</strong>

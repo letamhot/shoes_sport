@@ -93,7 +93,6 @@
                                 <span style="color:#DC143C">Total:
                                     <b>{{ $value->size_product->sum('qty') }}</b></span>
                             </td>
-                            {{-- <td>{{ $value->size_product->sum('qty')}}</td> --}}
                             <td><img src="data:image;base64, {{$value->image}}" width="60px" height="60px"></td>
                             <td>{{number_format($value->price_input)}}</td>
                             <td>{{ number_format($value->promotion_price) }}</td>
@@ -118,8 +117,6 @@
                             <td>{{$value->deleted_at}}</td>
 
                             <td>
-                                {{-- <a href="{{ route('product.show', $value->id) }}" class="btn btn-primary">Show</a>
-                                --}}
                                 <a href="{{ route('product.edit', $value->id) }}" class="btn btn-primary"onclick="return confirm('Are you sure to update {{ $value->name }}')"><i
                                         class="fa fa-edit" title="Edit" ></i></a>
                             </td>
@@ -151,7 +148,6 @@
 @endsection
 
 @push('show-ajax')
-{{-- @csrf ajax--}}
 <meta name="csrf-token" content="{{ csrf_token() }}">​
 <script type="text/javascript" charset="utf-8">
     $.ajaxSetup({

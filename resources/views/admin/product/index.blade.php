@@ -31,7 +31,6 @@
                             <th>Type</th>
                             <th>Producer</th>
                             <th>Size/Quantity</th>
-                            {{-- <th>Amount</th> --}}
                             <th>Image</th>
                             <th>Price_input</th>
                             <th>Price_sale</th>
@@ -69,7 +68,6 @@
                                 <span style="color:#DC143C">Total:
                                     <b>{{ $value->size_product->sum('qty') }}</b></span>
                             </td>
-                            {{-- <td>{{ $value->size_product->sum('qty')}}</td> --}}
 
                             <td><img src="data:image;base64, {{$value->image}}" width="60px" height="60px"></td>
                             <td>{{number_format($value->price_input)}}</td>
@@ -95,9 +93,6 @@
 
                             <td>{{$value->updated_at}}</td>
                             <td>
-                                {{-- <a href="{{ route('product.show', $value->id) }}" class="btn
-                                btn-primary">Show</a>
-                                --}}
                                 <a href="{{ route('product.edit', $value->id) }}" class="btn btn-warning" type="submit"
                                     onclick="return confirm('Are you sure to update?')"
                                     style="color:yellow"><i class="fa fa-edit" title="Edit"></i></a>
